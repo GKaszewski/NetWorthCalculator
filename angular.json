@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "NetWorthCalc"
+  "defaultProject": "NetWorthCalc",
+  "cli": {
+    "analytics": "f0981830-77a9-4a96-8fe1-bf350fb8693e"
+  }
 }

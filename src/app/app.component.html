@@ -1,7 +1,7 @@
 <app-main-nav></app-main-nav>
-<div>
-  <div class="data" fxLayout="row wrap" fxLayoutGap=10px>
-    <mat-card>
+<div fxLayout="column" fxLayoutAlign="center stretch">
+  <div class="data" fxLayout="row" fxLayout.xs="column wrap" fxLayoutGap=1rem fxLayoutAlign="center">
+    <mat-card fxLayout.xs="column" fxLayoutAlign.xs="none center">
       <mat-card-header>
         <mat-card-title>Your assets</mat-card-title>
       </mat-card-header>
@@ -15,7 +15,7 @@
       </mat-card-content>
     </mat-card>
   
-    <mat-card>
+    <mat-card fxLayout.xs="column" fxLayoutAlign.xs="none center">
       <mat-card-header>
         <mat-card-title>Your liabilites</mat-card-title>
       </mat-card-header>
@@ -32,9 +32,9 @@
   </div>
   
   
-  <div class="options" fxLayout="column" fxLayoutGap=10px fxLayoutAlign="center center">
+  <div fxLayout="column" fxLayout.xs="column wrap" fxLayoutGap=10px fxLayoutAlign="center center">
     <button mat-button color="primary" (click)="calculateNetWorth()">Calculate</button>
-    <p body-1>Your net worth: {{ formattedNetWorth }}</p>
+    <p [class.positive]="netWorth > 0" [class.negative]="netWorth < 0" body-1>Your net worth: {{ formattedNetWorth }}</p>
   </div>
+  <span fxFlex></span>
 </div>
-<router-outlet></router-outlet>
